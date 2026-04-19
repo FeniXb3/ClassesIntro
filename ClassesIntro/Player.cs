@@ -31,6 +31,11 @@ public class Player
     private string avatar = "@";
     private Vector2 position;
 
+    public Player(Vector2 startingPosition)
+    {
+        position = startingPosition;
+    }
+    
     public void Display()
     {
         Console.SetCursorPosition(position.x, position.y);
