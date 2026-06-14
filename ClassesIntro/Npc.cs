@@ -13,11 +13,11 @@ public class Npc : Character
     {
     }
 
-    public override void ChooseAction()
+    public override void ChooseAction(Map map)
     {
         int directionIndex = Random.Shared.Next(_availableDirections.Count);
         Vector2 direction = _availableDirections[directionIndex];
-        ClearAtPosition();
+        ClearAtPosition(map);
         Move(direction);
     }
 }

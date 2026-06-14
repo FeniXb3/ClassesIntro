@@ -31,4 +31,9 @@ public class Map
             Console.WriteLine();
         }
     }
+
+    public Cell GetCell(Vector2 position)
+    {
+        return cells[position.y][position.x];
+    }
 }

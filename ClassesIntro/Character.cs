@@ -16,10 +16,11 @@ public abstract class Character
         Console.Write(avatar);
     }
 
-    public void ClearAtPosition()
+    public void ClearAtPosition(Map map)
     {
+        Cell cell = map.GetCell(position);
         Console.SetCursorPosition(position.x, position.y);
-        Console.Write(" ");
+        cell.Display();
     }
 
     public void Move(Vector2 diff)
@@ -42,5 +43,5 @@ public abstract class Character
         }
     }
 
-    public abstract void ChooseAction();
+    public abstract void ChooseAction(Map map);
 }

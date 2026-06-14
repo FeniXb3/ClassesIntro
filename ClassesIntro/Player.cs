@@ -6,10 +6,10 @@ public class Player : Character
     {
     }
 
-    public override void ChooseAction()
+    public override void ChooseAction(Map map)
     {
         ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-        ClearAtPosition();
+        ClearAtPosition(map);
     
         if (keyInfo.Key == ConsoleKey.A)
         {
